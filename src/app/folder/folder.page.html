@@ -1,22 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button></ion-menu-button>  
     </ion-buttons>
-    <ion-title>Zona de Cocina</ion-title>
+
+    <ion-title style="text-align: center">Cocina</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Zona de Cocina</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <ion-item style="margin-top: 20px;">
-    <ion-input type="search" placeholder="¿Buscas algo en especial?"></ion-input>
-    <ion-button color="warning">Buscar</ion-button>
+  <ion-item>
+    <ion-button>De</ion-button>
+    <ion-button>En</ion-button>
+    <ion-button>PF</ion-button>
+    <ion-button>Po</ion-button>
   </ion-item>
 
   <ion-row>
