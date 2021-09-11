@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'inscripcion',
     loadChildren: () => import('./usuario/inscripcion/inscripcion.module').then( m => m.InscripcionPageModule)
+  },
+  {
+    path: 'nueva-receta',
+    loadChildren: () => import('./creador/nueva-receta/nueva-receta.module').then( m => m.NuevaRecetaPageModule)
   }
 
 ];
