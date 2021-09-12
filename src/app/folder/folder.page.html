@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="warning">
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>  
     </ion-buttons>
@@ -16,51 +16,55 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-item style="--background:LemonChiffon;">
-    <ion-button color="success">De</ion-button>
-    <ion-button color="success">En</ion-button>
-    <ion-button color="success">PF</ion-button>
-    <ion-button color="success">Po</ion-button>
+  <ion-item class="color">
+    <ion-button class="boton">De</ion-button>
+    <ion-button class="boton">En</ion-button>
+    <ion-button class="boton" >PF</ion-button>
+    <ion-button class="boton" >Po</ion-button>
   </ion-item>
-
-  <ion-row>
-    <ion-col>
-    <ion-card>
-      <img src="assets/icon/comida1.jpg" width="150px">
-    <ion-card-content>
-      <p>Tacos</p>
-    </ion-card-content>
-  </ion-card>
-  </ion-col>
-
-    <ion-col>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
       <ion-card>
-        <img src="assets/icon/comida1.jpg" width="150px">
+        <img src="assets/icon/comida1.jpg" width="">
+      
         <ion-card-content>
           <ion-card-subtitle>Tacos</ion-card-subtitle>
         </ion-card-content>
-      </ion-card>
+     
+    </ion-card>
     </ion-col>
-  </ion-row>
 
-  <ion-row>
-    <ion-col>
-    <ion-card>
-      <img src="assets/icon/comida1.jpg" width="150px">
-    <ion-card-content>
-      <p>Tacos</p>
-    </ion-card-content>
-  </ion-card>
-  </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="assets/icon/comida1.jpg" width="200px">
+          
+          <ion-card-content>
+            <ion-card-subtitle>Tacos</ion-card-subtitle>
+          </ion-card-content>
+          
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-    <ion-col>
+    <ion-row>
+      <ion-col>
       <ion-card>
-        <img src="assets/icon/comida1.jpg" width="150px">
-        <ion-card-content>
-          <ion-card-subtitle>Tacos</ion-card-subtitle>
-        </ion-card-content>
-      </ion-card>
+        <img src="assets/icon/comida1.jpg" width="200px">
+      <ion-card-content>
+        <ion-card-subtitle>Tacos</ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
     </ion-col>
-  </ion-row>
 
+      <ion-col>
+        <ion-card>
+          <img src="assets/icon/comida1.jpg" width="150px">
+          <ion-card-content>
+            <ion-card-subtitle>Tacos</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

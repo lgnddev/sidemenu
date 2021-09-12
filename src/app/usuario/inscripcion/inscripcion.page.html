@@ -1,15 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Bienvenido Chef</ion-title>
+    <ion-title style="text-align: center">Bienvenido Chef</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button ion-button icon-only>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-grid>
+  <form style="background-color:white;">
     <ion-item>
       <ion-label position="floating">Nombre:</ion-label>
       <ion-input></ion-input>
@@ -51,7 +53,9 @@
       <ion-input type="password"></ion-input>
     </ion-item>
 
-    <ion-button color="warning">Warning</ion-button>
-  </ion-grid>
+    <ion-item>
+      <ion-button type="submit">Registrar</ion-button>
+    </ion-item>
+  </form>
   
 </ion-content>
