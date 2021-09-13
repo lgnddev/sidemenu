@@ -1,9 +1,9 @@
-ion-content{
-    --padding-top: 70px;
-    background-image: url('/assets/fondo.jpg') !important;
-  }
+ion-content.fondo{
+  --padding-top: 70px;
+  --background: url(../../../assets/icon/fondo.jpg) !important;
+}
 
 .boton{
-  --background:#81C784;
+--background:#81C784;
 }
 
