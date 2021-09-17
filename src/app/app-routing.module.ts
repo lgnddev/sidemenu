@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'nueva-receta',
     loadChildren: () => import('./creador/nueva-receta/nueva-receta.module').then( m => m.NuevaRecetaPageModule)
+  },
+  {
+    path: 'reg-recetas',
+    loadChildren: () => import('./receta/reg-recetas/reg-recetas.module').then( m => m.RegRecetasPageModule)
   }
 
 ];

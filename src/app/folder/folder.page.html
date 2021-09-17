@@ -19,8 +19,8 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card>
-          <img src="assets/icon/comida1.jpg">
+        <ion-card [routerLink]="['/reg-recetas']">
+          <img src="assets/icon/comida1.jpg" >
 
           <ion-card-content>
             <ion-card-subtitle>Tacos</ion-card-subtitle>
@@ -31,7 +31,7 @@
 
       <ion-col>
         <ion-card>
-          <img src="assets/icon/comida1.jpg" width="200px">
+          <img src="assets/icon/comida1.jpg" >
 
           <ion-card-content>
             <ion-card-subtitle>Tacos</ion-card-subtitle>
@@ -44,7 +44,7 @@
     <ion-row>
       <ion-col>
         <ion-card>
-          <img src="assets/icon/comida1.jpg" width="200px">
+          <img src="assets/icon/comida1.jpg">
           <ion-card-content>
             <ion-card-subtitle>Tacos</ion-card-subtitle>
           </ion-card-content>
@@ -53,7 +53,7 @@
 
       <ion-col>
         <ion-card>
-          <img src="assets/icon/comida1.jpg" width="150px">
+          <img src="assets/icon/comida1.jpg">
           <ion-card-content>
             <ion-card-subtitle>Tacos</ion-card-subtitle>
           </ion-card-content>
@@ -74,10 +74,14 @@
           <ion-button class="boton">En</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="boton">PF</ion-button>
+          <ion-button class="boton">
+            <ion-icon name="fast-food-outline"></ion-icon>
+          </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="boton">Po</ion-button>
+          <ion-button class="boton">
+            <ion-icon name="ice-cream-outline"></ion-icon>
+          </ion-button>
         </ion-col>
       </div>
     </center> 
@@ -86,7 +90,7 @@
 
 
 
-<ion-icon name="fast-food-outline"></ion-icon>
-<ion-icon name="ice-cream-outline"></ion-icon>
+
+
 
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
