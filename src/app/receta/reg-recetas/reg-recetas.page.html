@@ -20,23 +20,30 @@
       <img src="assets/icon/comida1.jpg" alt="">
     </div>
     
-    <div class="difi">
-      Tipo/Dificultad
+    <div class="difi" style="font-size:13px; text-align: left;">
+      <ion-row>
+        <ion-col size="7">
+          <p>Tipo: Plato de Fondo</p>
+        </ion-col>
+        <ion-col size="5">
+         <p>Dificultad: Fácil</p>
+        </ion-col>
+      </ion-row>
     </div>
 
-    <ion-item style="width:70%;">
-      <p>Ingredientes</p>
+    <ion-item style="width:70%; text-align:center;">
+      <p>Ingredientes: <br>
+        Palta</p>
     </ion-item>
 
     <ion-item style="width:90%;">
-      <p>Preparación</p>
+      <p>Preparación:</p>
     </ion-item>
 
     <ion-item style="width:90%;">
-      <p>Danos tu Opinión</p>
+      <p>Danos tu Opinión:</p>
     </ion-item>
   </center>
-
 </ion-content>
 
 <ion-footer>
@@ -44,10 +51,14 @@
     <center>
       <div style="margin-bottom: 15px; margin-top: 15px;">
         <ion-col>
-          <ion-button class="boton">De</ion-button>
+          <ion-button class="boton" [routerLink]="['/desayuno']">
+            <ion-icon name="nutrition-outline"></ion-icon>
+          </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="boton">En</ion-button>
+          <ion-button class="boton">
+            <ion-icon name="leaf-outline"></ion-icon>
+          </ion-button>
         </ion-col>
         <ion-col>
           <ion-button class="boton">
@@ -60,6 +71,6 @@
           </ion-button>
         </ion-col>
       </div>
-    </center>
+    </center> 
   </ion-toolbar>
 </ion-footer>

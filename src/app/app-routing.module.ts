@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'reg-recetas',
     loadChildren: () => import('./receta/reg-recetas/reg-recetas.module').then( m => m.RegRecetasPageModule)
+  },
+  {
+    path: 'desayuno',
+    loadChildren: () => import('./receta/desayuno/desayuno.module').then( m => m.DesayunoPageModule)
   }
 
 ];
