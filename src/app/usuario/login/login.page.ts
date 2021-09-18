@@ -7,10 +7,18 @@ import { Router, NavigationExtras } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  user : String;
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  sendUser(){
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: this.user
+      }
+    }
+    this.router.navigate([''], navigationExtras);
+  }
 }
