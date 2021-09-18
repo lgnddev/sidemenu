@@ -11,10 +11,23 @@ h1{
 .barras{
   --border-radius:30px !important;
   margin-bottom:10px !important;
-  --background:#D4CFC0 !important;
+  --background:#00000094 !important;
   width:95%;
 }
 
 .boton{
---background:#81C784;
+--background:#4c8f4f;
+}
+
+.fondo1{
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+.blur {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.blurtest{
+  filter: blur(0px);
 }

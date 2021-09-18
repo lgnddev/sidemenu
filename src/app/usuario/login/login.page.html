@@ -1,28 +1,34 @@
-<ion-content class="fondo">
+  <ion-content class="fondo">
+  <div class="fondo1 ">
+    
+    <center>
+      <h1 class="ion-text-center ion-margin-vertical ion-padding-top" style="margin: 32px 0; padding-top: 32px">Iniciar Sesión</h1>
+      <ion-item class="barras">
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user" required></ion-input>
+      </ion-item>
+  
+      <ion-item class="barras">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+    </center>
+    
 
-  <h1 class="ion-text-center ion-margin-vertical">Iniciar Sesión</h1>
+    <ion-grid class="ion-padding-bottom" style="padding-bottom: 64px">
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" class="ion-text-center">
+          <ion-button expand="full" shape="round" (click)="sendUser()" class="ion-margin-vertical boton"
+            style="margin-top: 32px ; border-radius: 128px !important">Iniciar Sesion</ion-button>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+          <p>Aun no te has registrado?</p>
+          <a href="" [routerLink]="['/inscripcion']"> Registrarse </a> <br>
+          <a href="" [routerLink]="['/recuperar-contrasena']">Olvidaste tu contraseña?</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-  <ion-item class="barras">
-    <ion-label position="floating">Usuario:</ion-label>
-    <ion-input type="text" [(ngModel)]="user" required></ion-input>
-  </ion-item>
-
-  <ion-item class="barras">
-    <ion-label position="floating">Contraseña:</ion-label>
-    <ion-input type="password" required></ion-input>
-  </ion-item>
-
-  <ion-grid>
-    <ion-row class="ion-align-items-center">
-      <ion-col size="12" class="ion-text-center">
-        <ion-button expand="full" shape="round" (click)="sendUser()" class="ion-margin-vertical boton" style="margin-top: 32px ; border-radius: 128px !important">Iniciar Sesion</ion-button>
-      </ion-col>
-      <ion-col size="12" class="ion-text-center">
-        <p>Aun no te has registrado?</p> 
-        <a href="" [routerLink]="['/inscripcion']"> Registrarse </a> <br>
-        <a href="" [routerLink]="['/recuperar-contrasena']" >Olvidaste tu contraseña?</a>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 
 </ion-content>
