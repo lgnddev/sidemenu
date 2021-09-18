@@ -37,6 +37,18 @@ const routes: Routes = [
   {
     path: 'desayuno',
     loadChildren: () => import('./receta/desayuno/desayuno.module').then( m => m.DesayunoPageModule)
+  },
+  {
+    path: 'ensalada',
+    loadChildren: () => import('./receta/ensalada/ensalada.module').then( m => m.EnsaladaPageModule)
+  },
+  {
+    path: 'plato',
+    loadChildren: () => import('./receta/plato/plato.module').then( m => m.PlatoPageModule)
+  },
+  {
+    path: 'postre',
+    loadChildren: () => import('./receta/postre/postre.module').then( m => m.PostrePageModule)
   }
 
 ];

@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <ion-title style="text-align: center">(receta)</ion-title>
+    <ion-title style="text-align: center">Desayuno</ion-title>
 
     <ion-buttons slot="end">
       <ion-button ion-button icon-only>
@@ -16,28 +16,43 @@
 
 <ion-content [fullscreen]="true">
   <center>
+    <h3 class="titulo">Panqueques con Manjar</h3>
     <div class="imagen">
-      <img src="assets/icon/comida1.jpg" alt="">
-    </div>
-    
-    <div class="difi" style="font-size:13px; text-align: left;">
-      <ion-row>
-        <ion-col size="7">
-          <p>Tipo: Plato de Fondo</p>
-        </ion-col>
-        <ion-col size="5">
-         <p>Dificultad: Fácil</p>
-        </ion-col>
-      </ion-row>
+      <img src="assets/icon/panqueques.jpg" alt="">
     </div>
 
-    <ion-item style="width:70%; text-align:center;">
+    <div class="difi">
+      <p>Tipo: Desayuno</p>
+      <p>Dificultad: Fácil</p>
+    </div>
+
+    <ion-item style="width:95%; text-align:center;">
       <p>Ingredientes: <br>
-        Palta</p>
+        1 1/2 Taza de leche semidescremada <br>
+        2 Huevos <br>
+        1 Cucharada de aceite <br>
+        1 1/2 Taza de harina cernida <br>
+        12 Cucharadas de manjar</p>
     </ion-item>
 
-    <ion-item style="width:90%;">
-      <p>Preparación:</p>
+    <ion-item style="width:95%;">
+      <ion-row>
+        <ion-col>
+          <p>Preparación:</p>
+          <p>1) Coloca todos los ingredientes en una juguera, excepto el manjar, vertiendo primero los liquidos como la
+            leche,
+            huevos y aceite y al final los secos. Procesa a velocidad media durante unos segundos hasta conseguir un
+            batido
+            homogéneo.</p>
+          <p>2) Luego calienta una sartén de teflón o antiadherente de diametro mediano, vierte ¾ de un cucharón y
+            distribuye por toda la sartén con movimientos circulares e inclinados con el mango de la sartén.
+            Cocina durante unos segundos hasta dorar sus bordes y voltea. Cocina unos segundos mas y repite el
+            procedimiento
+            hasta acabar la mezcla.</p>
+          <p>3) Una vez listos, rellénalos uno a uno con una cucharada de manjar y enróllalos sobre sí mismos,
+            espolvorea azúcar flor y sírvelos de inmediato fríos o calientes como más te guste.</p>
+        </ion-col>
+      </ion-row>
     </ion-item>
 
     <ion-item style="width:90%;">
@@ -50,27 +65,29 @@
   <ion-toolbar class="color">
     <center>
       <div style="margin-bottom: 15px; margin-top: 15px;">
-        <ion-col>
-          <ion-button class="boton" [routerLink]="['/desayuno']">
-            <ion-icon name="nutrition-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="boton">
-            <ion-icon name="leaf-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="boton">
-            <ion-icon name="fast-food-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button class="boton">
-            <ion-icon name="ice-cream-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
+        <ion-row>
+          <ion-col size="3">
+            <ion-button class="boton" [routerLink]="['/desayuno']">
+              <ion-icon name="nutrition-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button class="boton">
+              <ion-icon name="leaf-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button class="boton">
+              <ion-icon name="fast-food-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button class="boton">
+              <ion-icon name="ice-cream-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
       </div>
-    </center> 
+    </center>
   </ion-toolbar>
 </ion-footer>
