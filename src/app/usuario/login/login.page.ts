@@ -3,6 +3,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
 import {ThemePalette} from '@angular/material/core';
 import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -16,19 +17,34 @@ export class LoginPage implements OnInit{
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 70;
   public load: Boolean = false;
+  field: string="";
   
-  constructor(private router: Router, private animationCtrl: AnimationController) { }
+  constructor(private router: Router, private animationCtrl: AnimationController, public toastController: ToastController) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   sendUser(){
-    let navigationExtras: NavigationExtras = {
+    if(this.validateModel(this.user)){
+      let navigationExtras: NavigationExtras = {
       state: {
         user: this.user
       }
     }
     this.router.navigate([''], navigationExtras);
+    }
+    else{
+      this.presentToast("Falta: "+this.field);
+    }
+  }
+
+  validateModel(model:any){
+    for (var [key, value] of Object.entries(model)) {
+      if (value=="") {
+        this.field=key;
+        return false;
+      }
+    }
+    return true;
   }
 
   Boton(){
@@ -36,5 +52,15 @@ export class LoginPage implements OnInit{
     setTimeout(() => {
       this.load = false;
     }, 3000)
+  }
+
+  async presentToast(message:string, duration?:number){
+    const toast = await this.toastController.create(
+      {
+        message:message,
+        duration:duration?duration:2000
+      }
+    );
+    toast.present();
   }
 }
