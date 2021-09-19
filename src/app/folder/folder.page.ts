@@ -18,6 +18,15 @@ export class FolderPage implements OnInit {
     });
   }
 
+  sendUser(){
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: this.user
+      }
+    }
+    this.router.navigate(['/reg-recetas'], navigationExtras);
+  }
+
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }

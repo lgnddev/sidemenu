@@ -1,23 +1,26 @@
 ion-content{
-    --background: url(../../../assets/icon/fondo2.jpg) no-repeat center/cover fixed;
+    --background: url(../../../assets/icon/fondo.jpg) no-repeat center/cover fixed;
 }
 
 .barras{
-    background:lemonchiffon ;
-}
+   color:rgb(255, 255, 255);
+    --background:rgba(0, 0, 0, 0) !important;
+
+  }
+  
 
 ion-button{
-    --background:#81C784;
+    --background:rgba(255, 255, 255, 0.712);
+    color: black;
+    margin-top: 30px;
+    margin-bottom:30px;
+    width:84%;
 }
 
-ion-toolbar{
-    --background:#FFC107;
-}
-
-ion-item{
+.fondo1{
+    background-color: rgba(0, 0, 0, 0.904);
     --border-radius:30px !important;
-    margin-bottom:5px !important;
-    width:95%;
-    --background:#D5DBDB;
-    color:black;
-  }
+    margin-bottom:10px !important;
+    width:84%;  
+}
+

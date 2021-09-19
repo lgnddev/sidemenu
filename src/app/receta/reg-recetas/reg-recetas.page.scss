@@ -1,48 +1,24 @@
-ion-toolbar{
-    --background:#FFC107;
-}
-
-ion-content{
-    --ion-background-color: white;
-}
-
-.color{
-    --background:LemonChiffon;
-}
-
-.boton{
-    --background:#81C784;
-}
-
-.imagen{
-    margin-top:10px;
-    margin-bottom:8px;
-    width:95%;
-    border:5px solid;
-    border-color: brown;
-}
-
-.difi{
-    width:95%;
-    border:3px solid;
-    border-color: brown;
-    margin-bottom:10px;
-    color:black;
-    background-color:LemonChiffon;
-    font-size:14px; 
+.container {
+    position: relative;
     text-align: center;
-}
+    color: white;
+  }
 
-ion-item{
-    border:3px solid;
-    border-color: brown;
-    margin-bottom: 8px;
-    --background:LemonChiffon;
-    color:black;
-    font-size: 14px;
-}
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
 
-.titulo{
-    color:black; 
-    margin-bottom: 20px;
-}
+  .box {
+    line-height:200px;
+    font-size:20px;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))0 100%/100% 50px  no-repeat,
+    url(../../../assets/icon/panqueques.jpg) ;
+  }
+
+  .avatar {
+    background-image: url('../../../assets/icon/Jorge.png');
+    background-size: cover;
+  }

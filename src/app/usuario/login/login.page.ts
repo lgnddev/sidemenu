@@ -18,10 +18,12 @@ export class LoginPage implements OnInit{
   value = 70;
   public load: Boolean = false;
   field: string="";
+
   
   constructor(private router: Router, private animationCtrl: AnimationController, public toastController: ToastController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   sendUser(){
     if(this.validateModel(this.user)){
@@ -30,10 +32,16 @@ export class LoginPage implements OnInit{
         user: this.user
       }
     }
-    this.router.navigate([''], navigationExtras);
+    this.load = true;
+    setTimeout(() => {
+      this.load = false;
+      this.router.navigate([''], navigationExtras);
+      this.presentToast('Falta: ');
+    }, 2000)
+
     }
     else{
-      this.presentToast("Falta: "+this.field);
+      this.presentToast('Falta: ');
     }
   }
 
@@ -47,17 +55,12 @@ export class LoginPage implements OnInit{
     return true;
   }
 
-  Boton(){
-    this.load = true;
-    setTimeout(() => {
-      this.load = false;
-    }, 3000)
-  }
-
   async presentToast(message:string, duration?:number){
     const toast = await this.toastController.create(
       {
+        cssClass: 'toast-wrapper.toast-bottom',
         message:message,
+        position: 'bottom',
         duration:duration?duration:2000
       }
     );
