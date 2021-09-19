@@ -29,6 +29,8 @@ ion-content{
     margin-bottom:10px;
     color:black;
     background-color:LemonChiffon;
+    font-size:14px; 
+    text-align: center;
 }
 
 ion-item{
@@ -37,4 +39,10 @@ ion-item{
     margin-bottom: 8px;
     --background:LemonChiffon;
     color:black;
+    font-size: 14px;
+}
+
+.titulo{
+    color:black; 
+    margin-bottom: 20px;
 }
