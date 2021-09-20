@@ -12,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   @ViewChild("title", { read: ElementRef, static: true }) title: ElementRef;
-  user: String="";
+  user: String;
 
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
@@ -40,6 +40,7 @@ export class LoginPage implements OnInit {
         this.presentToast('Bienvenido');
       }, 2000)
       this.user=null;
+
 
     }
     else {
