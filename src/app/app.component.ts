@@ -9,9 +9,8 @@ export class AppComponent {
 
   public appPages = [
     { title: 'Home', url: '/folder/Inbox', icon: 'home' },
-    { title: 'Login', url: '/login', icon: 'person-circle' },
     { title: 'Tus Recetas', url: '/folder/Outbox', icon: 'book' },
-    { title: 'Creador de Recetas', url: '/nueva-receta', icon: 'pencil'},
     { title: 'Favoritos', url: '/folder/Archived', icon: 'heart' },
+    { title: 'Cerrar Sesion', url: '/login', icon: 'log-out' },
   ];
 }

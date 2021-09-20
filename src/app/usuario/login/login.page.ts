@@ -23,6 +23,7 @@ export class LoginPage implements OnInit{
   constructor(private router: Router, private animationCtrl: AnimationController, public toastController: ToastController) { }
 
   ngOnInit() {
+    console.log(this.user)
   }
 
   sendUser(){
