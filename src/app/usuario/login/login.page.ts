@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
-import {ThemePalette} from '@angular/material/core';
-import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -10,58 +10,50 @@ import { ToastController } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit{
-  @ViewChild("title", {read: ElementRef, static: true}) title: ElementRef;
-  user : String;
+export class LoginPage implements OnInit {
+  @ViewChild("title", { read: ElementRef, static: true }) title: ElementRef;
+  user: String="";
+
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 70;
   public load: Boolean = false;
-  field: string="";
+  field: string = "";
 
-  
   constructor(private router: Router, private animationCtrl: AnimationController, public toastController: ToastController) { }
 
   ngOnInit() {
+    
   }
 
-  sendUser(){
-    if(this.validateModel(this.user)){
+  sendUser() {
+    if (this.user!=null) {
       let navigationExtras: NavigationExtras = {
-      state: {
-        user: this.user
+        state: {
+          user: this.user
+        }
       }
-    }
-    this.load = true;
-    setTimeout(() => {
-      this.load = false;
-      this.router.navigate([''], navigationExtras);
-      this.presentToast('Falta: ');
-    }, 2000)
+      this.load = true;
+      setTimeout(() => {
+        this.load = false;
+        this.router.navigate([''], navigationExtras);
+        this.presentToast('Bienvenido');
+      }, 2000)
+      this.user=null;
 
     }
-    else{
-      this.presentToast('Falta: ');
+    else {
+      this.presentToast('Error');
     }
   }
 
-  validateModel(model:any){
-    for (var [key, value] of Object.entries(model)) {
-      if (value=="") {
-        this.field=key;
-        return false;
-      }
-    }
-    return true;
-  }
-
-  async presentToast(message:string, duration?:number){
+  async presentToast(message: string, duration?: number) {
     const toast = await this.toastController.create(
       {
         cssClass: 'toast-wrapper.toast-bottom',
-        message:message,
+        message: message,
         position: 'bottom',
-        duration:duration?duration:2000
+        duration: duration ? duration : 2000
       }
     );
     toast.present();
