@@ -1,20 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text=""></ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="fondo">
-  <div class="fondo1">
+<ion-content>
+  <div #title class="fondo1">
     <ion-row>
       <ion-col>
         <h3 class="ion-text-center ion-margin-vertical" style="margin: 32px 0">¿Olvidaste tu contraseña? </h3>
-        <p class="ion-text-center"> A continuacion podras cambiar la contraseña de tu cuenta ingresando el correo electronico asociado a esta.</p>
+        <p class="ion-text-center"> A continuacion podras cambiar la contraseña de tu cuenta ingresando el correo
+          electronico asociado a esta.</p>
       </ion-col>
     </ion-row>
-  
+
     <ion-grid>
       <ion-row class="ion-align-items-center">
         <ion-col size="12" class="ion-text-center">
@@ -24,10 +25,10 @@
           </ion-item>
         </ion-col>
         <ion-col>
-          <ion-button (click)="presentAlert()" expand="full" shape="round" class="ion-margin-vertical" style="margin: 32px 0;" color="secondary">Enviar Email</ion-button>
+          <ion-button (click)="presentAlert()" expand="full" shape="round" class="ion-margin-vertical boton"
+            style="margin: 32px 0;">Enviar Email</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-  
 </ion-content>

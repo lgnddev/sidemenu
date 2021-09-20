@@ -1,9 +1,13 @@
+ion-toolbar{
+  --background:#F1C40F !important;
+}
+
 ion-content.fondo{
   --background: url(../../assets/icon/fondo.jpg) no-repeat center/cover fixed;
 }
 
 .fondo1{
-  background-color: rgba(0, 0, 0, 0.911);
+  background-color: rgba(99, 99, 91, 0.911);
 }
 
 .fondo2{
@@ -17,5 +21,9 @@ ion-content.fondo{
 
 .boton{
   --background:#ffffff00;
-  }
+}
+
+.tipo{
+  --background:green;
+}
 

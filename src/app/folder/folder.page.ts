@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import {Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 
 @Component({
