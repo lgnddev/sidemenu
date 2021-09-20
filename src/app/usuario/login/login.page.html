@@ -26,8 +26,16 @@
         </ion-col>
         <ion-col size="12" class="ion-text-center">
           <p>Aun no te has registrado?</p>
-          <a href="" [routerLink]="['/inscripcion']"> Registrarse </a> <br>
-          <a href="" [routerLink]="['/recuperar-contrasena']">Olvidaste tu contraseña?</a>
+          <ion-row>
+            <ion-col><p  [routerLink]="['/inscripcion']"> Registrarse </p></ion-col>
+            <ion-col><p  [routerLink]="['/recuperar-contrasena']">Olvidaste tu contraseña?</p></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><ion-button class="boton1" href="" [routerLink]="['/inscripcion']"> <ion-icon name="person-add-outline"></ion-icon>  </ion-button> <br></ion-col>
+            <ion-col><ion-button class="boton1" href="" [routerLink]="['/recuperar-contrasena']"> <ion-icon name="help-circle-outline"></ion-icon></ion-button></ion-col>
+          </ion-row>
+          
+          
         </ion-col>
       </ion-row>
     </ion-grid>

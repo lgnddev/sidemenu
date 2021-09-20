@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Home', url: '/folder/Inbox', icon: 'home' },
     { title: 'Tus Recetas', url: '/folder/Outbox', icon: 'book' },
     { title: 'Favoritos', url: '/folder/Archived', icon: 'heart' },
+    { title: 'Configuracion', icon: 'cog' },
     { title: 'Cerrar Sesion', url: '/login', icon: 'log-out' },
   ];
 }

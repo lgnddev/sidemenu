@@ -23,9 +23,15 @@ export class LoginPage implements OnInit {
   constructor(private router: Router, private animationCtrl: AnimationController, public toastController: ToastController) { }
 
   ngOnInit() {
-    console.log(this.user)
+    const animation = this.animationCtrl
+    .create()
+    .addElement(this.title.nativeElement)
+    .duration(1500)
+    .fromTo("opacity", 0, 1);
+    animation.play();
   }
 
+  
   
   sendUser() {
     if (this.user!=null) {
@@ -38,14 +44,14 @@ export class LoginPage implements OnInit {
       setTimeout(() => {
         this.load = false;
         this.router.navigate([''], navigationExtras);
-        this.presentToast('Bienvenido');
+        this.presentToast('Inicio de Sesion Exitoso');
       }, 2000)
       this.user=null;
 
 
     }
     else {
-      this.presentToast('Error');
+      this.presentToast('Usuario y/o Contraseña Incorrecto');
     }
   }
 
