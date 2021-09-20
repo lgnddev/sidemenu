@@ -14,7 +14,7 @@
 </ion-header>
 <ion-content>
 
-  <h2>Creador de Receta</h2>
+  <h2 style="text-align:center; margin:20px;">Creador de Receta</h2>
 
   <ion-item>
     <ion-label>Nombre:</ion-label>
@@ -26,7 +26,7 @@
     <mat-tab label="1">
       <ng-template mat-tab-label>
         <mat-icon aria-hidden="false" aria-label="Example home icon">
-          <ion-icon name="nutrition-outline"></ion-icon>
+          <ion-icon name="clipboard-outline"></ion-icon>
         </mat-icon>
       </ng-template>
 
@@ -35,8 +35,8 @@
         <ion-select>
           <ion-select-option value="1">Desayuno</ion-select-option>
           <ion-select-option value="2">Ensalada</ion-select-option>
-          <ion-select-option value="2">Plato de Fondo</ion-select-option>
-          <ion-select-option value="2">Postre</ion-select-option>
+          <ion-select-option value="3">Plato de Fondo</ion-select-option>
+          <ion-select-option value="4">Postre</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
@@ -44,17 +44,23 @@
         <ion-select>
           <ion-select-option value="1">Desayuno</ion-select-option>
           <ion-select-option value="2">Ensalada</ion-select-option>
-          <ion-select-option value="2">Plato de Fondo</ion-select-option>
-          <ion-select-option value="2">Postre</ion-select-option>
+          <ion-select-option value="3">Plato de Fondo</ion-select-option>
+          <ion-select-option value="4">Postre</ion-select-option>
         </ion-select>
       </ion-item>
+
+      <ion-item style="text-align:center;">
+        <ion-button color="warning">Limpiar</ion-button>
+        <ion-button color="success">Registrar</ion-button>
+      </ion-item>
+
     </mat-tab>
 
 
     <mat-tab label="">
       <ng-template mat-tab-label>
         <mat-icon aria-hidden="false" aria-label="Example home icon">
-          <ion-icon name="nutrition-outline"></ion-icon>
+          <ion-icon name="image-outline"></ion-icon>
         </mat-icon>
       </ng-template>
       <ion-item class="barras">
@@ -66,24 +72,61 @@
     <mat-tab label="">
       <ng-template mat-tab-label>
         <mat-icon aria-hidden="false" aria-label="Example home icon">
-          <ion-icon name="nutrition-outline"></ion-icon>
+          <ion-icon name="restaurant-outline"></ion-icon>
         </mat-icon>
       </ng-template>
 
       <ion-item class="barras">
         <ion-label position="floating">Ingredientes:</ion-label>
-        <ion-text-area></ion-text-area>
+        <ion-textarea></ion-textarea>
       </ion-item>
-      
+
     </mat-tab>
 
     <mat-tab label="">
       <ng-template mat-tab-label>
         <mat-icon aria-hidden="false" aria-label="Example home icon">
-          <ion-icon name="nutrition-outline"></ion-icon>
+          <ion-icon name="book-outline"></ion-icon>
         </mat-icon>
       </ng-template>
+
+      <ion-item>
+        <ion-label position="floating">Preparación:</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
     </mat-tab>
   </mat-tab-group>
+
+  <h2 style="text-align:center; margin:20px;">Tus Recetas</h2>
+
+  <ion-item>
+
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <div class="imagen">
+          <img src="../../../assets/icon/panqueques.jpg" alt="" style="width:80%">
+          <h2>Panqueques con Manjar</h2>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="imagen">
+          <img src="../../../assets/icon/comida1.jpg" alt="" style="width:80%">
+          <h2>Slide 2</h2>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+  </ion-item>
+
+
+
+
+
+
+
+
+
+
+
 
 </ion-content>
