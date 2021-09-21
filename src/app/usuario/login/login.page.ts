@@ -16,7 +16,6 @@ export class LoginPage implements OnInit {
 
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
-  value = 70;
   public load: Boolean = false;
   field: string = "";
 
