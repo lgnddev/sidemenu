@@ -49,9 +49,14 @@ const routes: Routes = [
   {
     path: 'postre',
     loadChildren: () => import('./receta/postre/postre.module').then( m => m.PostrePageModule)
-  },  {
+  },
+  {
     path: 'tus-recetas',
     loadChildren: () => import('./creador/tus-recetas/tus-recetas.module').then( m => m.TusRecetasPageModule)
+  },
+  {
+    path: 'tus-recetas1',
+    loadChildren: () => import('./receta/tus-recetas/tus-recetas.module').then( m => m.TusRecetasPageModule)
   }
 
 
